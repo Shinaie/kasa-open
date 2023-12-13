@@ -1,0 +1,55 @@
+nav {
+    max-width: 1240px;
+    width:100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        height: 68px;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        gap:57px;
+    
+        a {
+            text-decoration: none;
+
+                li {
+                    list-style: none;
+                    color: $color1;
+                    cursor: pointer;
+            }   
+        }
+    .nav-active {
+        position: relative;
+
+       &::after {
+              content: "";
+              height: 2px;
+              width: 0;
+              background: $color1;
+              position: absolute;
+              border-radius: 10px;
+              bottom: 0px;
+              left: 50%;
+              transform: translateX(-50%);
+              -webkit-animation: anim 0.3s ease forwards;
+              animation: anim 0.6s ease forwards;
+      
+              @-webkit-keyframes anim {
+                to {
+                  width: 100%;
+                }
+              }
+              @keyframes anim {
+                to {
+                  width: 100%;
+                }
+              }
+            }
+            }
+}
+}

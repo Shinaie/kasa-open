@@ -1,0 +1,19 @@
+footer {
+    background : $colorblack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 66px 0 29px;
+
+    .footer-logo {
+        img {
+            height: 40px;
+        }
+    }
+
+    .subtitle {
+        color : $colorwhite;
+    }
+}

@@ -1,0 +1,30 @@
+.gallery {
+    margin-top: 50px;
+    padding: 50px;
+    background: $color2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 60px;
+    width: 100%;
+    border-radius: 25px;
+
+    .card {
+         position: relative;
+         cursor: pointer;
+         height: 340px ;
+         width :340px;
+         border-radius: 10px;
+        background : linear-gradient(180deg, $color1 0%, rgba(0, 0, 0, 0.50) 100%);
+
+    p {
+        position: absolute;
+        left:0;
+        color: $colorwhite;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    
+
+}
+}
