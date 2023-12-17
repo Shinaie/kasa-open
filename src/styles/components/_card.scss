@@ -17,9 +17,18 @@
          border-radius: 10px;
         background : linear-gradient(180deg, $color1 0%, rgba(0, 0, 0, 0.50) 100%);
 
+        img {
+            height: 100%;
+            width:100%;
+            object-fit: cover;
+            border-radius: 10px;
+            position:relative;
+        }
+
     p {
         position: absolute;
-        left:0;
+        left: 20px;
+        top: 268px;
         color: $colorwhite;
         font-size: 18px;
         font-weight: 500;

@@ -1,59 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import dblogement from "../data/logement.json";
 
 const Card = () => {
   return (
     <div className="gallery">
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
-      <NavLink to="./logement">
-        <div className="card">
-          <p>Titre de la location</p>
-        </div>
-      </NavLink>
+      {dblogement.map((logement, index) => (
+        <NavLink key={index} to={`./logement/${logement.id}`}>
+          <div className="card">
+            <img src={logement.cover} alt="" />
+            <p>{logement.title}</p>
+          </div>
+        </NavLink>
+      ))}
     </div>
   );
 };
