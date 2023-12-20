@@ -8,8 +8,9 @@ const About = () => {
   return (
     <div>
       <Navigation />
-      <Banner src={source2} alt="photo de montagne" />
-
+      <main>
+        <Banner src={source2} alt="photo de montagne" />
+      </main>
       <Footer />
     </div>
   );
