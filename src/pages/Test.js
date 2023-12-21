@@ -1,13 +1,12 @@
 import React from "react";
-import Carrousel from "../components/Carrousel";
-import dbLogement from "../data/logement.json";
+import dataAbout from "../data/about.json";
 
 const Test = () => {
-  const selectedLogement = dbLogement[0];
+  console.log(dataAbout);
+
   return (
     <div>
-      {/* test du Caroussel  */}
-      <Carrousel data={selectedLogement} />
+      <p>page blanche : {dataAbout[1].text}</p>
     </div>
   );
 };

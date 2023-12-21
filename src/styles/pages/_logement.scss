@@ -1,16 +1,16 @@
-.container {
+.header-img-container {
     max-width: 1240px;
     width:100%;
     margin: 50px auto 20px;
     color: $color1;
     
 
-    .title-container {
+    .header-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-
+        .title-container {
         h2 {
             font-size: 2.5rem;
             font-weight: 500;
@@ -34,6 +34,7 @@
             }
         }
     }
+    }
     .owner-container {
         .owner {
             display: flex;
@@ -52,5 +53,12 @@
                 border-radius: 50%;
             }
         }
+    }
+
+    .rolling-container {
+        display: flex;
+        align-items: flex-start;
+        gap:76px;
+        margin-top: 25px;
     }
 }

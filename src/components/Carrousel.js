@@ -3,7 +3,9 @@ import arrowLeft from "../assets/arrow_left.svg";
 import arrowRight from "../assets/arrow_right.svg";
 
 const Carrousel = ({ data }) => {
+  //Hook useState : position actuelle de la slide
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const nextSlide = () => {
     setCurrentSlide((prevSlide) =>
       prevSlide === data.pictures.length - 1 ? 0 : prevSlide + 1

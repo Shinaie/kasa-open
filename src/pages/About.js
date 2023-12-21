@@ -2,7 +2,9 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Banner from "../components/Banner";
 import source2 from "../img/img_source2.jpg";
+import dataAbout from "../data/about.json";
 import Footer from "../components/Footer";
+import Collapse from "../components/Collapse";
 
 const About = () => {
   return (
@@ -10,6 +12,7 @@ const About = () => {
       <Navigation />
       <main>
         <Banner src={source2} alt="photo de montagne" />
+        <Collapse data={dataAbout} titleKey="title" textKey="text" />
       </main>
       <Footer />
     </div>
