@@ -8,7 +8,7 @@ const Footer = () => {
         <img src={logoFooter} alt="footer-logo" />
       </div>
       <div className="subtitle">
-        <p> © 2020 Kasa. All rights reserverd</p>
+        <p> © 2023 Kasa. All rights reserverd</p>
       </div>
     </footer>
   );

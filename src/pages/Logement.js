@@ -41,7 +41,14 @@ const Logement = () => {
             </div>
             <div className="owner-container">
               <div className="owner">
-                <h3>{logement.host.name}</h3>
+                {/* permet de séparer le nom et le prenom dans un tableau */}
+                <h3>
+                  {/* Affiche la première partie du tableau (prénom) */}
+                  {logement.host.name.split(" ")[0]}
+                  <br />
+                  {/* Affiche la deuxième partie du tableau (nom de famille) */}
+                  {logement.host.name.split(" ")[1]}
+                </h3>
                 <img src={logement.host.picture} alt="" />
               </div>
               <div className="rating"></div>

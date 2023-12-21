@@ -12,7 +12,9 @@ const About = () => {
       <Navigation />
       <main>
         <Banner src={source2} alt="photo de montagne" />
-        <Collapse data={dataAbout} titleKey="title" textKey="text" />
+        <div className="about-container">
+          <Collapse data={dataAbout} titleKey="title" textKey="text" />
+        </div>
       </main>
       <Footer />
     </div>

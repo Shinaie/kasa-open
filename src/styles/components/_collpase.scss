@@ -1,48 +1,50 @@
 .description-container {
-    width : 100%;
+    width: 100%;
     margin-bottom: -30px;
-    
-
+  
     .main-deroulant {
-        display: flex;
-        align-items: center;
-        padding:10px 20px 10px 10px;
-        border-radius: 10px;
-        background: $color1;
-        color: $colorwhite;
-        cursor: pointer;
-        position: relative;
-
-        h2 {
-            cursor: pointer;
-            width:100%;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        img {
-            width: 32px;
-            height: 32px;
-        }
-
-        .dropdown-exit {
-
-            max-height: 250px;
-            padding: 15px 8px;
-            opacity: 1;
-            max-height: 200px;
-
-        }
-        
-    }
-    p {
-        background: $color2;
-        padding: 15px 8px;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px 10px 10px;
+      border-radius: 10px;
+      background: $color1;
+      color: $colorwhite;
+      position: relative;
+  
+      h2 {
+        width: 100%;
         font-size: 1rem;
-        line-height: 25px;
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
+        font-weight: 500;
+      }
+  
+      img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+  
+        &.collapse-active {
+          transform: rotate(-180deg);
+        }
+      }
     }
-    
-}
+  
+    .dropdown-exit {
+      max-height: 250px;
+      padding: 15px 8px;
+      opacity: 1;
+      transition: opacity 0.5s ease,max-height 0.5s ease;
+      margin-bottom: 30px;
+    }
+  
+    p {
+      background: $color2;
+      padding: 15px 8px;
+      font-size: 1rem;
+      line-height: 25px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      
+    }
+  }
