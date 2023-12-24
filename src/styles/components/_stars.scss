@@ -1,0 +1,15 @@
+.stars-container {
+    display: flex;
+    margin-top: 15px;
+    justify-content: flex-end;
+
+    .star-filled {
+        width : 46px;
+    }
+    .star-empty {
+        width : 46px;
+    }
+    img {
+       height: 36px;
+     }
+}

@@ -33,8 +33,9 @@
       max-height: 250px;
       padding: 15px 8px;
       opacity: 1;
-      transition: opacity 0.5s ease,max-height 0.5s ease;
+      transition: opacity 1s ease,max-height 0.5s ease;
       margin-bottom: 30px;
+     
     }
   
     p {
@@ -46,5 +47,26 @@
       max-height: 0;
       overflow: hidden;
       
+      
     }
+  }
+
+  @media screen and (max-width: 600px) 
+  {
+    .description-container {
+
+      .main-deroulant {
+        height: 30px;
+        padding: 10px;
+      }
+
+      h2 {
+        font-size:13px ;
+      }
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    } 
+    
   }

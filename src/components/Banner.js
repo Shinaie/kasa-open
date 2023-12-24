@@ -1,11 +1,10 @@
 import React from "react";
-import source1 from "../img/img_source.png";
 
-const Banner = () => {
+const Banner = ({ src, alt, text }) => {
   return (
     <div className="banner">
-      <img src={source1} alt="paysage de montagne type breton" />
-      <p>Chez vous, partout et ailleurs</p>
+      {src && <img src={src} alt={alt} />}
+      {text && <p>{text}</p>}
     </div>
   );
 };

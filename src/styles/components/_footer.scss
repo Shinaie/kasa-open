@@ -17,3 +17,19 @@ footer {
         color : $colorwhite;
     }
 }
+
+@media screen and (max-width: 600px) {
+
+    footer {
+        margin-top : 30px;
+        padding: 60px 120px 58px;
+        justify-content: flex-end;
+        gap:0;
+
+        .subtitle {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+    
+}

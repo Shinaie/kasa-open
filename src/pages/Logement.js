@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import dblogement from "../data/logement.json";
 import { useParams } from "react-router-dom";
 import Collapse from "../components/Collapse";
+import Stars from "../components/Stars";
 
 const Logement = () => {
   //Récupere l'id du logement à partir de l'url
@@ -14,6 +15,7 @@ const Logement = () => {
   // Trouve le logement correspondant dans la base de données
 
   const logement = dblogement.find((apptm) => apptm.id === id);
+  console.log(logement.equipments);
 
   // si la page n'existe pas
 
@@ -51,21 +53,18 @@ const Logement = () => {
                 </h3>
                 <img src={logement.host.picture} alt="" />
               </div>
-              <div className="rating"></div>
+              <div className="rating">
+                <Stars rating={parseFloat(logement.rating)} />
+              </div>
             </div>
           </div>
           <div className="rolling-container">
+            <Collapse titleKey="Description" textKey={logement.description} />
             <Collapse
-              data={[
-                { title: "Description", description: logement.description },
-              ]}
-              titleKey="title"
-              textKey="description"
-            />
-            <Collapse
-              data={[{ title: "Equipements", equipments: logement.equipments }]}
-              titleKey="title"
-              textKey="equipments"
+              titleKey="Equipements"
+              textKey={logement.equipments.map((equ) => (
+                <ul key={equ}>{equ}</ul>
+              ))}
             />
           </div>
         </div>

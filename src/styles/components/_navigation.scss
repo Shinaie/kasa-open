@@ -18,6 +18,7 @@ nav {
             text-decoration: none;
 
                 li {
+                    font-size: 24px;
                     list-style: none;
                     color: $color1;
                     cursor: pointer;
@@ -52,4 +53,47 @@ nav {
             }
             }
 }
+}
+
+@media screen and (max-width : 1250px) {
+  nav {
+    padding:0 25px;
+  }  
+}
+
+@media screen and (max-width : 600px) {
+
+  nav {
+    padding : 0 20px;
+
+    .logo {
+      height: 46px;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .navigation {
+    gap:26px;
+
+    a {
+        li {
+          transition: 0.2s;
+          font-size: 1rem;
+        }
+      }
+
+      @media  screen and (max-width: 300px) {
+
+      nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap : 20px;
+      }    
+      }
+      }
+  
 }
