@@ -23,13 +23,17 @@
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
   
-        &.collapse-active {
-          transform: rotate(-180deg);
-        }
+        &.arrowImg-active {
+           transform: rotate(-180deg);
+         }
+
+         &.arrowImg {
+          transform: rotate(0deg);
+         }
       }
     }
   
-    .dropdown-exit {
+    .collapse-active {
       max-height: 250px;
       padding: 15px 8px;
       opacity: 1;
@@ -38,7 +42,7 @@
      
     }
   
-    p {
+    p,ul {
       background: $color2;
       padding: 15px 8px;
       font-size: 1rem;

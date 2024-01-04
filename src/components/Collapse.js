@@ -10,6 +10,19 @@ const Collapse = ({ titleKey, textKey }) => {
     setExpanded(!isExpanded);
   };
 
+  //Vérifie si textKey est un tableau non vide
+  const bulletedList = Array.isArray(textKey) && textKey.length > 0;
+
+  const contentElement = bulletedList ? (
+    <ul className={`collapse${isExpanded ? "-active" : ""}`}>
+      {textKey.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  ) : (
+    <p className={`collapse${isExpanded ? "-active" : ""}`}>{textKey}</p>
+  );
+
   return (
     <div className="description-container">
       <div className="main-deroulant">
@@ -18,10 +31,10 @@ const Collapse = ({ titleKey, textKey }) => {
           src={arrow}
           alt=""
           onClick={handleClick}
-          className={`collapse${isExpanded ? "-active" : ""}`}
+          className={`arrowImg${isExpanded ? "-active" : ""}`}
         />
       </div>
-      <p className={isExpanded ? "dropdown-exit" : ""}>{textKey}</p>
+      {contentElement}
     </div>
   );
 };

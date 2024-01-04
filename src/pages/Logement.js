@@ -15,7 +15,6 @@ const Logement = () => {
   // Trouve le logement correspondant dans la base de données
 
   const logement = dblogement.find((apptm) => apptm.id === id);
-  console.log(logement.equipments);
 
   // si la page n'existe pas
 
@@ -60,12 +59,7 @@ const Logement = () => {
           </div>
           <div className="rolling-container">
             <Collapse titleKey="Description" textKey={logement.description} />
-            <Collapse
-              titleKey="Equipements"
-              textKey={logement.equipments.map((equ) => (
-                <ul key={equ}>{equ}</ul>
-              ))}
-            />
+            <Collapse titleKey="Equipements" textKey={logement.equipments} />
           </div>
         </div>
       </main>

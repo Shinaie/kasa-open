@@ -92,16 +92,44 @@
                 p {
                     font-size: 14px;
                 }
-                
+                .tag {
+                    li {
+                        font-size: 10px;
+                        min-width: 84px;
+                    }
+                }
             }
 
-            h2 {
-                
+            .owner-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+
+                .owner {
+                    h3 {
+                        font-size: 12px;
+                    }
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+
+                .rating {
+                    .stars-container {
+                        img {
+                            height: 18px;
+                        }
+                    }
+                }
             }
-            p {
-                font-size: 18;
-            }
+
         }
+        .rolling-container {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
     
 }
