@@ -18,29 +18,37 @@ const Carrousel = ({ data }) => {
     );
   };
 
+  const showArrowsCont = data.pictures.length > 1;
+
   return (
     <div className="slider-container">
-      <img
-        src={arrowLeft}
-        onClick={prevSlide}
-        alt="arrow-left"
-        className="slider-arrow arrow-left"
-      />
+      {showArrowsCont && (
+        <>
+          <img
+            src={arrowLeft}
+            onClick={prevSlide}
+            alt="arrow-left"
+            className="slider-arrow arrow-left"
+          />
+          <img
+            src={arrowRight}
+            onClick={nextSlide}
+            alt="arrow-right"
+            className="slider-arrow arrow-right"
+          />
+        </>
+      )}
       <img src={data.pictures[currentSlide]} alt="" className="slider" />
-      <img
-        src={arrowRight}
-        onClick={nextSlide}
-        alt="arrow-right"
-        className="slider-arrow arrow-right"
-      />
-      <div className="cont-container">
-        <p>
-          {currentSlide === data.pictures.length
-            ? currentSlide - 1
-            : currentSlide + 1}
-          / {data.pictures.length}
-        </p>
-      </div>
+      {showArrowsCont && (
+        <div className="cont-container">
+          <p>
+            {currentSlide === data.pictures.length
+              ? currentSlide - 1
+              : currentSlide + 1}
+            / {data.pictures.length}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
